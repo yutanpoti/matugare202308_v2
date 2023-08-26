@@ -30,12 +30,10 @@
         <script src="js/rbush.min.js"></script>
         <script src="js/labelgun.min.js"></script>
         <script src="js/labels.js"></script>
-        <script src="data/_3.js"></script>
-        <script src="data/HA_4.js"></script>
-        <script src="data/segyouhan_geojson_5.js"></script>
-        <script src="data/R1matugare_6.js"></script>
-        <script src="data/R5matugare_mituhiro_7.js"></script>
-        <script src="data/R1_8.js"></script>
+        <script src="data/segyouhan_geojson_3.js"></script>
+        <script src="data/R1matugare_4.js"></script>
+        <script src="data/R5matugare_mituhiro_5.js"></script>
+        <script src="data/R1_6.js"></script>
         <script>
         var map = L.map('map', {
             zoomControl:true, maxZoom:20, minZoom:10
@@ -84,208 +82,7 @@
             maxNativeZoom: 18
         });
         layer_CS_2;
-        function pop__3(feature, layer) {
-            var popupContent = '<table>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['fid'] !== null ? autolinker.link(feature.properties['fid'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['L_アカマツ林齢MAX'] !== null ? autolinker.link(feature.properties['L_アカマツ林齢MAX'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                </table>';
-            layer.bindPopup(popupContent, {maxHeight: 400});
-        }
-
-        function style__3_0(feature) {
-            if (feature.properties['L_アカマツ林齢MAX'] >= 0.000000 && feature.properties['L_アカマツ林齢MAX'] <= 0.000000 ) {
-                return {
-                pane: 'pane__3',
-                opacity: 1,
-                color: 'rgba(35,35,35,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 1.0, 
-                fillOpacity: 0,
-                interactive: false,
-            }
-            }
-            if (feature.properties['L_アカマツ林齢MAX'] >= 0.000000 && feature.properties['L_アカマツ林齢MAX'] <= 30.000000 ) {
-                return {
-                pane: 'pane__3',
-                opacity: 1,
-                color: 'rgba(35,35,35,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 1.0, 
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(232,213,251,1.0)',
-                interactive: false,
-            }
-            }
-            if (feature.properties['L_アカマツ林齢MAX'] >= 30.000000 && feature.properties['L_アカマツ林齢MAX'] <= 60.000000 ) {
-                return {
-                pane: 'pane__3',
-                opacity: 1,
-                color: 'rgba(35,35,35,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 1.0, 
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(208,171,247,1.0)',
-                interactive: false,
-            }
-            }
-            if (feature.properties['L_アカマツ林齢MAX'] >= 60.000000 && feature.properties['L_アカマツ林齢MAX'] <= 90.000000 ) {
-                return {
-                pane: 'pane__3',
-                opacity: 1,
-                color: 'rgba(35,35,35,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 1.0, 
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(184,128,243,1.0)',
-                interactive: false,
-            }
-            }
-            if (feature.properties['L_アカマツ林齢MAX'] >= 90.000000 && feature.properties['L_アカマツ林齢MAX'] <= 131.000000 ) {
-                return {
-                pane: 'pane__3',
-                opacity: 1,
-                color: 'rgba(35,35,35,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 1.0, 
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(160,86,238,1.0)',
-                interactive: false,
-            }
-            }
-        }
-        map.createPane('pane__3');
-        map.getPane('pane__3').style.zIndex = 403;
-        map.getPane('pane__3').style['mix-blend-mode'] = 'normal';
-        var layer__3 = new L.geoJson(json__3, {
-            attribution: '',
-            interactive: false,
-            dataVar: 'json__3',
-            layerName: 'layer__3',
-            pane: 'pane__3',
-            onEachFeature: pop__3,
-            style: style__3_0,
-        });
-        bounds_group.addLayer(layer__3);
-        function pop_HA_4(feature, layer) {
-            var popupContent = '<table>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['fid'] !== null ? autolinker.link(feature.properties['fid'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['L_アカマツHA材積'] !== null ? autolinker.link(feature.properties['L_アカマツHA材積'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                </table>';
-            layer.bindPopup(popupContent, {maxHeight: 400});
-        }
-
-        function style_HA_4_0(feature) {
-            if (feature.properties['L_アカマツHA材積'] >= 0.000000 && feature.properties['L_アカマツHA材積'] <= 1.000000 ) {
-                return {
-                pane: 'pane_HA_4',
-                opacity: 1,
-                color: 'rgba(35,35,35,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 1.0, 
-                fillOpacity: 0,
-                interactive: false,
-            }
-            }
-            if (feature.properties['L_アカマツHA材積'] >= 1.000000 && feature.properties['L_アカマツHA材積'] <= 100.000000 ) {
-                return {
-                pane: 'pane_HA_4',
-                opacity: 1,
-                color: 'rgba(35,35,35,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 1.0, 
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(255,191,191,1.0)',
-                interactive: false,
-            }
-            }
-            if (feature.properties['L_アカマツHA材積'] >= 100.000000 && feature.properties['L_アカマツHA材積'] <= 200.000000 ) {
-                return {
-                pane: 'pane_HA_4',
-                opacity: 1,
-                color: 'rgba(35,35,35,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 1.0, 
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(255,128,128,1.0)',
-                interactive: false,
-            }
-            }
-            if (feature.properties['L_アカマツHA材積'] >= 200.000000 && feature.properties['L_アカマツHA材積'] <= 300.000000 ) {
-                return {
-                pane: 'pane_HA_4',
-                opacity: 1,
-                color: 'rgba(35,35,35,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 1.0, 
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(255,64,64,1.0)',
-                interactive: false,
-            }
-            }
-            if (feature.properties['L_アカマツHA材積'] >= 300.000000 && feature.properties['L_アカマツHA材積'] <= 488.200000 ) {
-                return {
-                pane: 'pane_HA_4',
-                opacity: 1,
-                color: 'rgba(35,35,35,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 1.0, 
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(255,0,0,1.0)',
-                interactive: false,
-            }
-            }
-        }
-        map.createPane('pane_HA_4');
-        map.getPane('pane_HA_4').style.zIndex = 404;
-        map.getPane('pane_HA_4').style['mix-blend-mode'] = 'normal';
-        var layer_HA_4 = new L.geoJson(json_HA_4, {
-            attribution: '',
-            interactive: false,
-            dataVar: 'json_HA_4',
-            layerName: 'layer_HA_4',
-            pane: 'pane_HA_4',
-            onEachFeature: pop_HA_4,
-            style: style_HA_4_0,
-        });
-        bounds_group.addLayer(layer_HA_4);
-        map.addLayer(layer_HA_4);
-        function pop_segyouhan_geojson_5(feature, layer) {
+        function pop_segyouhan_geojson_3(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
                         <th scope="row">segyouhan</th>\
@@ -295,9 +92,9 @@
             layer.bindPopup(popupContent, {maxHeight: 400});
         }
 
-        function style_segyouhan_geojson_5_0() {
+        function style_segyouhan_geojson_3_0() {
             return {
-                pane: 'pane_segyouhan_geojson_5',
+                pane: 'pane_segyouhan_geojson_3',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -308,20 +105,20 @@
                 interactive: true,
             }
         }
-        map.createPane('pane_segyouhan_geojson_5');
-        map.getPane('pane_segyouhan_geojson_5').style.zIndex = 405;
-        map.getPane('pane_segyouhan_geojson_5').style['mix-blend-mode'] = 'normal';
-        var layer_segyouhan_geojson_5 = new L.geoJson(json_segyouhan_geojson_5, {
+        map.createPane('pane_segyouhan_geojson_3');
+        map.getPane('pane_segyouhan_geojson_3').style.zIndex = 403;
+        map.getPane('pane_segyouhan_geojson_3').style['mix-blend-mode'] = 'normal';
+        var layer_segyouhan_geojson_3 = new L.geoJson(json_segyouhan_geojson_3, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_segyouhan_geojson_5',
-            layerName: 'layer_segyouhan_geojson_5',
-            pane: 'pane_segyouhan_geojson_5',
-            onEachFeature: pop_segyouhan_geojson_5,
-            style: style_segyouhan_geojson_5_0,
+            dataVar: 'json_segyouhan_geojson_3',
+            layerName: 'layer_segyouhan_geojson_3',
+            pane: 'pane_segyouhan_geojson_3',
+            onEachFeature: pop_segyouhan_geojson_3,
+            style: style_segyouhan_geojson_3_0,
         });
-        bounds_group.addLayer(layer_segyouhan_geojson_5);
-        function pop_R1matugare_6(feature, layer) {
+        bounds_group.addLayer(layer_segyouhan_geojson_3);
+        function pop_R1matugare_4(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['Id'] !== null ? autolinker.link(feature.properties['Id'].toLocaleString()) : '') + '</td>\
@@ -330,9 +127,9 @@
             layer.bindPopup(popupContent, {maxHeight: 400});
         }
 
-        function style_R1matugare_6_0() {
+        function style_R1matugare_4_0() {
             return {
-                pane: 'pane_R1matugare_6',
+                pane: 'pane_R1matugare_4',
                 radius: 4.0,
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
@@ -343,30 +140,30 @@
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(255,0,0,1.0)',
-                interactive: true,
+                interactive: false,
             }
         }
-        map.createPane('pane_R1matugare_6');
-        map.getPane('pane_R1matugare_6').style.zIndex = 406;
-        map.getPane('pane_R1matugare_6').style['mix-blend-mode'] = 'normal';
-        var layer_R1matugare_6 = new L.geoJson(json_R1matugare_6, {
+        map.createPane('pane_R1matugare_4');
+        map.getPane('pane_R1matugare_4').style.zIndex = 404;
+        map.getPane('pane_R1matugare_4').style['mix-blend-mode'] = 'normal';
+        var layer_R1matugare_4 = new L.geoJson(json_R1matugare_4, {
             attribution: '',
-            interactive: true,
-            dataVar: 'json_R1matugare_6',
-            layerName: 'layer_R1matugare_6',
-            pane: 'pane_R1matugare_6',
-            onEachFeature: pop_R1matugare_6,
+            interactive: false,
+            dataVar: 'json_R1matugare_4',
+            layerName: 'layer_R1matugare_4',
+            pane: 'pane_R1matugare_4',
+            onEachFeature: pop_R1matugare_4,
             pointToLayer: function (feature, latlng) {
                 var context = {
                     feature: feature,
                     variables: {}
                 };
-                return L.circleMarker(latlng, style_R1matugare_6_0(feature));
+                return L.circleMarker(latlng, style_R1matugare_4_0(feature));
             },
         });
-        bounds_group.addLayer(layer_R1matugare_6);
-        map.addLayer(layer_R1matugare_6);
-        function pop_R5matugare_mituhiro_7(feature, layer) {
+        bounds_group.addLayer(layer_R1matugare_4);
+        map.addLayer(layer_R1matugare_4);
+        function pop_R5matugare_mituhiro_5(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['fid'] !== null ? autolinker.link(feature.properties['fid'].toLocaleString()) : '') + '</td>\
@@ -376,15 +173,16 @@
                         <td>' + (feature.properties['ID'] !== null ? autolinker.link(feature.properties['ID'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['R1higai'] !== null ? autolinker.link(feature.properties['R1higai'].toLocaleString()) : '') + '</td>\
+                        <th scope="row">R1higai</th>\
+                        <td>' + (feature.properties['R1higai'] !== null ? autolinker.link(feature.properties['R1higai'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
         }
 
-        function style_R5matugare_mituhiro_7_0() {
+        function style_R5matugare_mituhiro_5_0() {
             return {
-                pane: 'pane_R5matugare_mituhiro_7',
+                pane: 'pane_R5matugare_mituhiro_5',
                 radius: 4.0,
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
@@ -398,27 +196,27 @@
                 interactive: true,
             }
         }
-        map.createPane('pane_R5matugare_mituhiro_7');
-        map.getPane('pane_R5matugare_mituhiro_7').style.zIndex = 407;
-        map.getPane('pane_R5matugare_mituhiro_7').style['mix-blend-mode'] = 'normal';
-        var layer_R5matugare_mituhiro_7 = new L.geoJson(json_R5matugare_mituhiro_7, {
+        map.createPane('pane_R5matugare_mituhiro_5');
+        map.getPane('pane_R5matugare_mituhiro_5').style.zIndex = 405;
+        map.getPane('pane_R5matugare_mituhiro_5').style['mix-blend-mode'] = 'normal';
+        var layer_R5matugare_mituhiro_5 = new L.geoJson(json_R5matugare_mituhiro_5, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_R5matugare_mituhiro_7',
-            layerName: 'layer_R5matugare_mituhiro_7',
-            pane: 'pane_R5matugare_mituhiro_7',
-            onEachFeature: pop_R5matugare_mituhiro_7,
+            dataVar: 'json_R5matugare_mituhiro_5',
+            layerName: 'layer_R5matugare_mituhiro_5',
+            pane: 'pane_R5matugare_mituhiro_5',
+            onEachFeature: pop_R5matugare_mituhiro_5,
             pointToLayer: function (feature, latlng) {
                 var context = {
                     feature: feature,
                     variables: {}
                 };
-                return L.circleMarker(latlng, style_R5matugare_mituhiro_7_0(feature));
+                return L.circleMarker(latlng, style_R5matugare_mituhiro_5_0(feature));
             },
         });
-        bounds_group.addLayer(layer_R5matugare_mituhiro_7);
-        map.addLayer(layer_R5matugare_mituhiro_7);
-        function pop_R1_8(feature, layer) {
+        bounds_group.addLayer(layer_R5matugare_mituhiro_5);
+        map.addLayer(layer_R5matugare_mituhiro_5);
+        function pop_R1_6(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['fid'] !== null ? autolinker.link(feature.properties['fid'].toLocaleString()) : '') + '</td>\
@@ -431,9 +229,9 @@
             layer.bindPopup(popupContent, {maxHeight: 400});
         }
 
-        function style_R1_8_0() {
+        function style_R1_6_0() {
             return {
-                pane: 'pane_R1_8',
+                pane: 'pane_R1_6',
                 radius: 4.0,
                 opacity: 1,
                 color: 'rgba(255,0,0,1.0)',
@@ -447,28 +245,28 @@
                 interactive: true,
             }
         }
-        map.createPane('pane_R1_8');
-        map.getPane('pane_R1_8').style.zIndex = 408;
-        map.getPane('pane_R1_8').style['mix-blend-mode'] = 'normal';
-        var layer_R1_8 = new L.geoJson(json_R1_8, {
+        map.createPane('pane_R1_6');
+        map.getPane('pane_R1_6').style.zIndex = 406;
+        map.getPane('pane_R1_6').style['mix-blend-mode'] = 'normal';
+        var layer_R1_6 = new L.geoJson(json_R1_6, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_R1_8',
-            layerName: 'layer_R1_8',
-            pane: 'pane_R1_8',
-            onEachFeature: pop_R1_8,
+            dataVar: 'json_R1_6',
+            layerName: 'layer_R1_6',
+            pane: 'pane_R1_6',
+            onEachFeature: pop_R1_6,
             pointToLayer: function (feature, latlng) {
                 var context = {
                     feature: feature,
                     variables: {}
                 };
-                return L.circleMarker(latlng, style_R1_8_0(feature));
+                return L.circleMarker(latlng, style_R1_6_0(feature));
             },
         });
-        bounds_group.addLayer(layer_R1_8);
-        map.addLayer(layer_R1_8);
+        bounds_group.addLayer(layer_R1_6);
+        map.addLayer(layer_R1_6);
         var baseMaps = {};
-        L.control.layers(baseMaps,{'<img src="legend/R1_8.png" /> 未処理R1被害木': layer_R1_8,'<img src="legend/R5matugare_mituhiro_7.png" />  R5matugare_mituhiro': layer_R5matugare_mituhiro_7,'<img src="legend/R1matugare_6.png" /> R1matugare': layer_R1matugare_6,'<img src="legend/segyouhan_geojson_5.png" /> segyouhan_geojson': layer_segyouhan_geojson_5,'アカマツHA材積<br /><table><tr><td style="text-align: center;"><img src="legend/HA_4_00000.png" /></td><td>0.0 - 0.0</td></tr><tr><td style="text-align: center;"><img src="legend/HA_4_11001.png" /></td><td>1 - 100</td></tr><tr><td style="text-align: center;"><img src="legend/HA_4_1002002.png" /></td><td>100 - 200</td></tr><tr><td style="text-align: center;"><img src="legend/HA_4_2003003.png" /></td><td>200 - 300</td></tr><tr><td style="text-align: center;"><img src="legend/HA_4_3004884.png" /></td><td>300 - 488</td></tr></table>': layer_HA_4,'アカマツ林齢<br /><table><tr><td style="text-align: center;"><img src="legend/_3_00000.png" /></td><td>0.0 - 0.0</td></tr><tr><td style="text-align: center;"><img src="legend/_3_00301.png" /></td><td>0.0 - 30</td></tr><tr><td style="text-align: center;"><img src="legend/_3_30602.png" /></td><td>30 - 60</td></tr><tr><td style="text-align: center;"><img src="legend/_3_60903.png" /></td><td>60 - 90</td></tr><tr><td style="text-align: center;"><img src="legend/_3_901314.png" /></td><td>90 - 131</td></tr></table>': layer__3,"長野県CS立体図": layer_CS_2,"ベースマップ航空写真": layer__1,"地理院淡色地図": layer__0,}).addTo(map);
+        L.control.layers(baseMaps,{'<img src="legend/R1_6.png" />  未処理R1被害木': layer_R1_6,'<img src="legend/R5matugare_mituhiro_5.png" />  R5matugare_mituhiro': layer_R5matugare_mituhiro_5,'<img src="legend/R1matugare_4.png" /> R1matugare': layer_R1matugare_4,'<img src="legend/segyouhan_geojson_3.png" /> segyouhan_geojson': layer_segyouhan_geojson_3,"長野県CS立体図": layer_CS_2,"ベースマップ航空写真": layer__1,"地理院淡色地図": layer__0,}).addTo(map);
         setBounds();
         </script>
     </body>
